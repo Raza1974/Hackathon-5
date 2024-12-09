@@ -1,5 +1,5 @@
 import Image from "next/image";
-export default function Shop() {
+export default function EditorChoice() {
   return (
     <div>
       {/* Centered Editor's Pick Section */}
@@ -48,3 +48,8 @@ export default function Shop() {
     </div>
   );
 }
+
+
+
+
+
