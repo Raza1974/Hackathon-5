@@ -3,10 +3,10 @@ import Image from 'next/image'
 
 const Herosection = () => {
   return (
-    <div className="relative w-full h-[916px]">
+    <div className="relative w-full h-[916px] mt-[80px] sm-[90px]">
       {/* Background Image */}
       <Image 
-        src="/carousel b.png" 
+        src="/carousel b.jpg" 
         alt="maingirl" 
         height={716} 
         width={1440} 

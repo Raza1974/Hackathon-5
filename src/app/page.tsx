@@ -1,22 +1,21 @@
-
 import EditorChoice from "@/app/pages/editorChoice/page";
 import VitaClasic from "@/app/pages/Vita-Clasic/page";
 import Product from "@/app/pages/Product/page";
 import FeaturedPosts from "@/app/pages/Featured-Posts/page";
-import HeroSection from  "@/app/pages/HeroSection/page";
+import HeroSection from "@/app/pages/HeroSection/page";
+import ProductList from "@/app/pages/ProductList";
 
 export default function Home() {
   return (
     <div>
-     <div>
+      <div>
         {/* Additional Sections */}
-       <HeroSection  />
+        <HeroSection />
         <EditorChoice />
         <Product />
         <VitaClasic />
         <FeaturedPosts />
-
-        
+<ProductList />
       </div>
     </div>
   );

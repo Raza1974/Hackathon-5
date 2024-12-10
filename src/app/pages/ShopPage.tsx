@@ -1,12 +1,12 @@
 import React from 'react';
-import Image from 'next/image'
+
 import { ProductCard } from "../components/Shop/ProductCard";
 import { CategoryCard } from "../components/Shop/CategoryCard";
 import { BrandLogo } from "../components/Shop/BrandLogo";
 import Link from 'next/link';
 const products = [
   {
-    imageSrc: "https://cdn.builder.io/api/v1/image/assets/4cd71706e2994eb5a15222630d99911f/20450f20d513c3027c0d9a1b9759fdbdc1aeb0026a6eb5e5fa59514d53020f57?apiKey=4cd71706e2994eb5a15222630d99911f&",
+    imageSrc: "/fixed-height (9).jpg",
     title: "Graphic Design",
     department: "English Department",
     originalPrice: "$16.48",
@@ -14,7 +14,7 @@ const products = [
     colors: ["sky-500", "teal-700", "orange-400", "teal-700"],
   },
   {
-    imageSrc: "https://cdn.builder.io/api/v1/image/assets/4cd71706e2994eb5a15222630d99911f/20450f20d513c3027c0d9a1b9759fdbdc1aeb0026a6eb5e5fa59514d53020f57?apiKey=4cd71706e2994eb5a15222630d99911f&",
+    imageSrc: "/product-cover-5 (9).jpg",
     title: "Graphic Design",
     department: "English Department",
     originalPrice: "$16.48",
@@ -22,7 +22,7 @@ const products = [
     colors: ["sky-500", "teal-700", "orange-400", "teal-700"],
   },
   {
-    imageSrc: "https://cdn.builder.io/api/v1/image/assets/4cd71706e2994eb5a15222630d99911f/20450f20d513c3027c0d9a1b9759fdbdc1aeb0026a6eb5e5fa59514d53020f57?apiKey=4cd71706e2994eb5a15222630d99911f&",
+    imageSrc: "/product-cover-5 (10).jpg",
     title: "Graphic Design",
     department: "English Department",
     originalPrice: "$16.48",
@@ -30,7 +30,7 @@ const products = [
     colors: ["sky-500", "teal-700", "orange-400", "teal-700"],
   },
   {
-    imageSrc: "https://cdn.builder.io/api/v1/image/assets/4cd71706e2994eb5a15222630d99911f/20450f20d513c3027c0d9a1b9759fdbdc1aeb0026a6eb5e5fa59514d53020f57?apiKey=4cd71706e2994eb5a15222630d99911f&",
+    imageSrc: "/product-cover-5 (14).jpg",
     title: "Graphic Design",
     department: "English Department",
     originalPrice: "$16.48",
@@ -38,7 +38,7 @@ const products = [
     colors: ["sky-500", "teal-700", "orange-400", "teal-700"],
   },
   {
-    imageSrc: "https://cdn.builder.io/api/v1/image/assets/4cd71706e2994eb5a15222630d99911f/20450f20d513c3027c0d9a1b9759fdbdc1aeb0026a6eb5e5fa59514d53020f57?apiKey=4cd71706e2994eb5a15222630d99911f&",
+    imageSrc: "/fixed-height (8).jpg",
     title: "Graphic Design",
     department: "English Department",
     originalPrice: "$16.48",
@@ -46,7 +46,7 @@ const products = [
     colors: ["sky-500", "teal-700", "orange-400", "teal-700"],
   },
   {
-    imageSrc: "https://cdn.builder.io/api/v1/image/assets/4cd71706e2994eb5a15222630d99911f/20450f20d513c3027c0d9a1b9759fdbdc1aeb0026a6eb5e5fa59514d53020f57?apiKey=4cd71706e2994eb5a15222630d99911f&",
+    imageSrc: "/product-cover-5.jpg",
     title: "Graphic Design",
     department: "English Department",
     originalPrice: "$16.48",
@@ -54,7 +54,7 @@ const products = [
     colors: ["sky-500", "teal-700", "orange-400", "teal-700"],
   },
   {
-    imageSrc: "https://cdn.builder.io/api/v1/image/assets/4cd71706e2994eb5a15222630d99911f/20450f20d513c3027c0d9a1b9759fdbdc1aeb0026a6eb5e5fa59514d53020f57?apiKey=4cd71706e2994eb5a15222630d99911f&",
+    imageSrc: "/product-cover-5 (6).jpg",
     title: "Graphic Design",
     department: "English Department",
     originalPrice: "$16.48",
@@ -62,40 +62,73 @@ const products = [
     colors: ["sky-500", "teal-700", "orange-400", "teal-700"],
   },
   {
-    imageSrc: "https://cdn.builder.io/api/v1/image/assets/4cd71706e2994eb5a15222630d99911f/20450f20d513c3027c0d9a1b9759fdbdc1aeb0026a6eb5e5fa59514d53020f57?apiKey=4cd71706e2994eb5a15222630d99911f&",
+    imageSrc: "/product-cover-5 (7).jpg",
     title: "Graphic Design",
     department: "English Department",
     originalPrice: "$16.48",
     salePrice: "$6.48",
     colors: ["sky-500", "teal-700", "orange-400", "teal-700"],
   },
-  // Add the rest of the products here
+  {
+    imageSrc: "/product-cover-5 (4).jpg",
+    title: "Graphic Design",
+    department: "English Department",
+    originalPrice: "$16.48",
+    salePrice: "$6.48",
+    colors: ["sky-500", "teal-700", "orange-400", "teal-700"],
+  },
+  {
+    imageSrc: "/product-cover-5 (1).jpg",
+    title: "Graphic Design",
+    department: "English Department",
+    originalPrice: "$16.48",
+    salePrice: "$6.48",
+    colors: ["sky-500", "teal-700", "orange-400", "teal-700"],
+  },
+  {
+    imageSrc: "/fixed-height (1).jpg",
+    title: "Graphic Design",
+    department: "English Department",
+    originalPrice: "$16.48",
+    salePrice: "$6.48",
+    colors: ["sky-500", "teal-700", "orange-400", "teal-700"],
+
+  },
+  {
+    imageSrc: "/fixed-height (2).jpg",
+    title: "Graphic Design",
+    department: "English Department",
+    originalPrice: "$16.48",
+    salePrice: "$6.48",
+    colors: ["sky-500", "teal-700", "orange-400", "teal-700"],
+  },
+    // Add the rest of the products here
 ];
 
 const categories = [
   {
-    imageSrc: "/card-item (3).png",
+    imageSrc: "/card-item (3).jpg",
     title: "CLOTHS",
     
     itemCount: 1,
   },
   {
-    imageSrc: "/card-item 1.png",
+    imageSrc: "/card-item 1.jpg",
     title: "CLOTHS",
     itemCount: 2,
   },
   {
-    imageSrc: "/card-item 3.png",
+    imageSrc: "/card-item 3.jpg",
     title: "CLOTHS",
     itemCount: 3,
   },
   {
-    imageSrc: "/col-md-4.png",
+    imageSrc: "/col-md-4.jpg",
     title: "CLOTHS",
     itemCount: 4,
   },
   {
-    imageSrc: "/card-item (4).png",
+    imageSrc: "/card-item (4).jpg",
     title: "CLOTHS",
     itemCount: 5,
   },
@@ -106,39 +139,39 @@ const categories = [
 
 const brands = [
   {
-    imageSrc: "/fa-brands_hooli.png",
+    imageSrc: "/fa-brands_hooli.jpg",
     width: "103px",
     heigth:"34px",
     aspectRatio: "3.03",
   },
   {
-    imageSrc: "/col-md-2.png",
+    imageSrc: "/col-md-2.jpg",
     width: "83px",
     heigth:"59px",
 
     aspectRatio: "3.03",
   },
   {
-    imageSrc: "/col-md-3 .png",
+    imageSrc: "/col-md-3 .jpg",
     width: "102px",
     heigth:"75px",
     aspectRatio: "3.03",
   },
   {
-    imageSrc: "/col-md-4 (3).png",
+    imageSrc: "/col-md-4 (3).jpg",
     width: "103px",
     heigth:"42px",
 
     aspectRatio: "3.03",
   },
   {
-    imageSrc: "/fa-brands-5 (1).png",
+    imageSrc: "/fa-brands-5 (1).jpg",
     width: "104px",
     heigth:"62px",
     aspectRatio: "3.03",
   },
   {
-    imageSrc: "/col-md-6 (5).png",
+    imageSrc: "/col-md-6 (5).jpg",
     width: "76px",
     heigth:"72px",
 
@@ -150,13 +183,7 @@ const brands = [
 
 const ShopPage: React.FC = () => {
   return (
-    <div className="flex overflow-hidden flex-col bg-white">
-      <Image
-        loading="lazy"
-        src="https://cdn.builder.io/api/v1/image/assets/4cd71706e2994eb5a15222630d99911f/ee30f465316d64a6d16d703cce566f6bace2d1a8c40a6b9b0d28f8fe3a1dac7b?apiKey=4cd71706e2994eb5a15222630d99911f&"
-        alt="Shop banner"
-        className="object-contain w-full aspect-[10.64] max-md:max-w-full"
-      />
+<div>
 
       <nav className="flex overflow-hidden flex-col justify-center items-center py-6 w-full font-bold text-center whitespace-nowrap bg-neutral-50 max-md:max-w-full">
         <div className="flex overflow-hidden flex-wrap gap-8 items-center max-md:max-w-full">
@@ -169,12 +196,7 @@ const ShopPage: React.FC = () => {
                 Home
               </Link>
 
-              <Image
-                loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/4cd71706e2994eb5a15222630d99911f/da70505010d42a4738e25babc01960f30719d0ea4ae64a2fe1cde24a1a46f669?apiKey=4cd71706e2994eb5a15222630d99911f&"
-                alt=""
-                className="object-contain shrink-0 self-stretch my-auto aspect-[0.56] w-[9px]"
-              />
+              
               <span className="self-stretch my-auto text-stone-300">Shop</span>
             </div>
           </div>
@@ -217,4 +239,3 @@ const ShopPage: React.FC = () => {
 };
 
 export default ShopPage;
-

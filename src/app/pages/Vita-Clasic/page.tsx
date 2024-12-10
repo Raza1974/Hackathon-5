@@ -1,32 +1,3 @@
-// export default function VitaClasic (){
-//     return(
-
-   
-
-// <div className="vita product bg-green-600 border border-black" >
-// <div>
-//    <div>
-//        <h1 className="text-white w-151px h-30px x-0 y-60">SUMMER 2020</h1>
-  
-
-//    </div>
-//    <div> 
-//     <h1 className="text-white w-509px h-160px x-0 y-120 font-bold ">Vita Classic  Product</h1>
-
-//    </div>
-
-// <div>
-// <p className="text-white w-341px h-40px x-0 y-310">We know how large objects will act, We know how are objects will act, We know</p>
-// </div>
-// <div>
-//     <h1 className="text-white w-80px h-32px x-0 y-10 font-bold">$16.48</h1>
-// </div>
-// </div>
-
-// </div>
-
-// ) 
-// }
 
 import React from 'react'
 import Image from 'next/image'
@@ -39,7 +10,7 @@ const VitaClassic = () => {
         <div className="bg-green-900 absolute inset-0 z-[-1] ">
         <div className="flex flex-col justify-center items-end ">
           <Image 
-            src="/shop-hero-2-png-picture-1.png" 
+            src="/shop-hero-2-png-picture-1.jpg" 
             alt="Hero Background" 
         width="443"
         height="665"
@@ -73,7 +44,7 @@ const VitaClassic = () => {
           {/* Image */}
           <div className="w-full sm:w-1/2 ">
             <Image 
-              src="/hero-cover-1.png" 
+              src="/hero-cover-1.jpg" 
               alt="Product Image" 
               layout="responsive"
               width={443} 
@@ -84,7 +55,7 @@ const VitaClassic = () => {
 
           {/* Text Overlay */}
           <div className="w-full sm:w-1/2 p-8">
-            <div className="space-y-4 text-center sm:text-left">
+            <div className="space-y-px4 text-center sm:text-left">
               <h5 className="font-montserrat font-bold text-[14px] sm:text-[16px] leading-[20px] sm:leading-[24px] tracking-[0.1px] text-black">
                 SUMMER 2020
               </h5>

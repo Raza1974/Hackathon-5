@@ -16,29 +16,29 @@ export default function EditorChoice() {
 
         <div className="w-1050px h-500px flex">
          <div className="editter">
-          <Image src="/men.png" alt="Hero" width={510} height={500} px-0 py-0 />
+          <Image src="/men.jpg" alt="Hero" width={510} height={500}  />
           </div>
           <div className="editter">
-          <Image src="/women.png" alt="Hero" width={240} height={500} />
+          <Image src="/women.jpg" alt="Hero" width={240} height={500} />
           </div>
           <div className="editter1">
             <Image
-              src="/accessories.png"
+              src="/accessories.jpg"
               alt="Hero"
               width={240}
               height={242}
-              px-0
-              py-0
+              
+              
             />
             
             <div className="editter2">
             <Image
-              src="/kid.png"
+              src="/kid.jpg"
               alt="Hero"
               width={240}
               height={242}
-              px-0
-              py-0
+            
+        
             />
           </div>
         </div>

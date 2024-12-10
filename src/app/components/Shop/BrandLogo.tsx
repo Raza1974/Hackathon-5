@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
+
 
 interface BrandLogoProps {
   imageSrc: string;
@@ -13,7 +13,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
   aspectRatio,
 }) => {
   return (
-    <Image
+    <img
       loading="lazy"
       src={imageSrc}
       alt="Brand logo"
@@ -22,4 +22,3 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
     />
   );
 };
-

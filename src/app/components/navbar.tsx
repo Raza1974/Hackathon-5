@@ -1,45 +1,47 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import { CiSearch, CiHeart } from "react-icons/ci";
-import { RiArrowDropDownLine } from "react-icons/ri";
+import { RiArrowDropDownLine, RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import { IoCartOutline } from "react-icons/io5";
 import { FaInstagram, FaYoutube, FaFacebookF, FaTwitter } from "react-icons/fa";
 import { FiPhone } from "react-icons/fi";
 import Image from "next/image";
+import { Button } from "./ui/button";
 
 export default function Navbar() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isShopDropdownOpen, setIsShopDropdownOpen] = useState(false);
+
   return (
-    <header className="bg-white shadow-sm border-b w-full">
+    <header className="bg-white shadow-sm border-b w-full fixed top-0 left-0 z-50">
       {/* Announcement Bar */}
       <div className="bg-black text-white py-2 text-sm flex flex-col md:flex-row justify-between items-center px-4 md:px-10">
         <div className="flex items-center space-x-6">
-          {/* Phone Info */}
           <div className="flex items-center space-x-2">
             <FiPhone className="text-lg" />
             <span>(225) 555-0118</span>
           </div>
-          {/* Email Info */}
           <div className="flex items-center space-x-2">
             <Image src="/icn mail.png" alt="hero" width={16} height={16} />
             <span>michelle.rivera@example.com</span>
           </div>
         </div>
-        {/* Announcement Text */}
         <div className="text-center flex-1 hidden md:block">
           Follow Us and get a chance to win 80% off
         </div>
-        {/* Social Media Icons */}
         <div className="flex items-center space-x-4 mt-2 md:mt-0">
           Follow Us:
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" title="Visit Instagram">
             <FaInstagram className="text-lg hover:text-gray-300 cursor-pointer" />
           </a>
-          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" title="YouTube">
+          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" title="Visit YouTube">
             <FaYoutube className="text-lg hover:text-gray-300 cursor-pointer" />
           </a>
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook">
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" title="Visit Facebook">
             <FaFacebookF className="text-lg hover:text-gray-300 cursor-pointer" />
           </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" title="Twitter">
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" title="Visit Twitter">
             <FaTwitter className="text-lg hover:text-gray-300 cursor-pointer" />
           </a>
         </div>
@@ -47,35 +49,73 @@ export default function Navbar() {
 
       {/* Main Navigation */}
       <div className="flex justify-between items-center px-4 md:px-10 py-4">
-        {/* Logo */}
         <h1 className="text-2xl font-bold text-black">Bandage</h1>
 
+        {/* Mobile Menu Toggle */}
+        <button
+          className="md:hidden text-black text-2xl"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          title="Toggle Menu"
+        >
+          {isMobileMenuOpen ? <RiCloseLine /> : <RiMenu3Line />}
+        </button>
+
         {/* Navigation Links */}
-        <nav className="hidden md:flex space-x-8 items-center">
+        <nav
+          className={`${
+            isMobileMenuOpen ? "flex" : "hidden"
+          } md:flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 items-center absolute md:static bg-white left-0 right-0 top-full md:top-auto md:bg-transparent p-4 md:p-0`}
+        >
           <a href="./" className="text-slate-600 hover:text-black hover:underline">
             Home
           </a>
+
           {/* Shop Dropdown */}
-          <div className="relative group">
-            <div className="flex items-center cursor-pointer">
-              <span className="text-slate-600 hover:text-black">Shop</span>
-              <RiArrowDropDownLine className="text-slate-600 text-lg" />
-            </div>
-            <div className="absolute top-full mt-1 bg-white shadow-md rounded-md hidden group-hover:flex flex-col">
+          <div
+            className="relative"
+            onMouseEnter={() => setIsShopDropdownOpen(true)}
+            onMouseLeave={() => setIsShopDropdownOpen(false)}
+          >
+            <Button
+              className="flex items-center text-slate-600 hover:text-black"
+              onClick={() => setIsShopDropdownOpen(!isShopDropdownOpen)}
+            >
+              <select
+                className="appearance-none bg-transparent px-4 py-2 focus:outline-none"
+                title="Shopping list"
+              >
+                <option>Shop</option>
+                <option>Shop1</option>
+                <option>Shop2</option>
+              </select>
+              <RiArrowDropDownLine className="ml-2 text-slate-600 text-lg" />
+            </Button>
+            <div
+              className={`absolute top-full mt-1 bg-white shadow-md rounded-md ${
+                isShopDropdownOpen ? "block" : "hidden"
+              }`}
+            >
               <a
-                href="./Shop1"
-                className="px-4 py-2 text-slate-600 hover:bg-slate-100 hover:text-black"
+                href="./shop"  // Link to Shop page
+                className="block px-4 py-2 text-slate-600 hover:bg-slate-100 hover:text-black"
+              >
+                Shop
+              </a>
+              <a
+                href="./Shop1"  // Link to Shop1 page
+                className="block px-4 py-2 text-slate-600 hover:bg-slate-100 hover:text-black"
               >
                 Shop1
               </a>
               <a
-                href="./Shop2"
-                className="px-4 py-2 text-slate-600 hover:bg-slate-100 hover:text-black"
+                href="./shop2"  // Link to Shop2 page
+                className="block px-4 py-2 text-slate-600 hover:bg-slate-100 hover:text-black"
               >
                 Shop2
               </a>
             </div>
           </div>
+
           <a href="./About" className="text-slate-600 hover:text-black hover:underline">
             About
           </a>
@@ -85,24 +125,18 @@ export default function Navbar() {
           <a href="./Contact" className="text-slate-600 hover:text-black hover:underline">
             Contact
           </a>
-          <a href="/ShopPage" className="text-slate-600 hover:text-black hover:underline">
+          <a href="./Productlist" className="text-slate-600 hover:text-black hover:underline">
             Pages
           </a>
         </nav>
 
-        {/* Mobile Menu Button */}
-        <button className="md:hidden text-black text-2xl" title="Toggle Menu">
-          <RiArrowDropDownLine />
-        </button>
-
-
         {/* Search and Icons */}
-        <div className="flex items-center space-x-2">
-          <a href="./Contact" className="text-blue-300 hover:text-black hover:underline">
+        <div className="hidden md:flex items-center space-x-2">
+          <a href="./login" className="text-blue-300 hover:text-black hover:underline">
             Login
           </a>
           <span>/</span>
-          <a href="./Pages" className="text-blue-300 hover:text-black hover:underline">
+          <a href="./register" className="text-blue-300 hover:text-black hover:underline">
             Register
           </a>
           <CiSearch className="text-blue-300 text-xl cursor-pointer hover:text-black" />

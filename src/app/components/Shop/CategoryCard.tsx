@@ -28,4 +28,3 @@ export const CategoryCard: React.FC<CategoryCardProps> = ({
     </div>
   );
 };
-
