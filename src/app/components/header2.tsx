@@ -7,7 +7,7 @@ import Link from "next/link";
 
 
 
-const Header = () => {
+const Header2 = () => {
  
   return (
     
@@ -35,7 +35,7 @@ const Header = () => {
             </li>
             <li>
               <Link
-                href="/priceng"
+                href="/pricing"
                 className="hover:underline hover:text-blue-500"
               >
                 Pricing
@@ -49,14 +49,7 @@ const Header = () => {
                 Contact
               </Link>
             </li>
-            <li>
-              <Link
-                href="/pages"
-                className="hover:underline hover:text-blue-500"
-              >
-                Pages
-              </Link>
-            </li>
+           
           </ul>
 
           {/* Icons and Links */}
@@ -78,4 +71,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Header2;

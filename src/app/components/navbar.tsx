@@ -112,7 +112,7 @@ export default function Navbar() {
           <a href="/contact" className="text-slate-600 hover:text-black hover:underline">
             Contact
           </a> 
-          <a href="/shop-page" className="text-slate-600 hover:text-black hover:underline">
+          <a href="/pages/shop-page" className="text-slate-600 hover:text-black hover:underline">
              Pages
           </a> 
          

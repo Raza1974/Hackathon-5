@@ -1,11 +1,12 @@
+/* eslint-disable @next/next/no-img-element */
 
-import Header2 from "@/app/components/header2";
-
+import  Header2 from "@/app/components/header2"
 export default function About() {
   return (
     
     <div>
-      <Header2 />  
+    
+      <Header2 />
       <div className="py-12 sm:px-6">
         {/* First Hero Section */}
 
@@ -278,7 +279,8 @@ export default function About() {
           </div>
           <div className="flex flex-col lg:flex-row items-center w-[1440px] h-[637px] mx-auto px-4 sm:px-6 lg:px-8">
             <div className=" w-1050px h-412px bg-blue-500 text-white p-8  flex-1 h-full">
-              <h4 className="text-sm font-medium uppercase mt-20 ml-10">
+              
+              <h4 className="text-sm font-medium uppercase mt-40 ml-10">
                 Work With Us
               </h4>
               <h2 className="text-3xl font-bold mb-4">Now Let’s grow Yours</h2>
@@ -291,6 +293,7 @@ export default function About() {
                 Button
               </button>
             </div>
+            
             <div className="flex-1">
               <img
                 src="/fixed-height (6).jpg"
@@ -299,6 +302,7 @@ export default function About() {
               />
             </div>
           </div>
+        
         </div>
       </div>
     </div>
