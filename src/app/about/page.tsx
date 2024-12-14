@@ -1,39 +1,11 @@
-import Link from "next/link";
+
+import Header2 from "@/app/components/header2";
 
 export default function About() {
   return (
+    
     <div>
-      <nav className="bg-white py-4 px-6 shadow-md">
-        <div className="max-w-[1440px] mx-auto flex items-center justify-between">
-          <div className=" ml-12 font-montserrat font-bold text-[24px] sm:text-[24px] leading-[56px] sm:leading-[80px] tracking-[0.2px] text-gray-900">Bandage</div>
-
-          <div className="hidden md:flex gap-8 text-sm font-medium text-gray-600">
-            <Link href="/" className="hover:text-gray-900">
-              Home{" "}
-            </Link>
-            <a href="/productpage" className="hover:text-gray-900">
-              Product
-            </a>
-            <a href="/pricing" className="hover:text-gray-900">
-              Pricing
-            </a>
-            <a href="/contact" className="hover:text-gray-900">
-              Contact
-            </a>
-          </div>
-          <div className="hidden md:flex items-center gap-4">
-            <a
-              href="#"
-              className="text-sm font-medium text-blue-500 hover:underline"
-            >
-              Login
-            </a>
-            <button className="px-5 py-2 bg-blue-500 text-white text-sm font-medium rounded-lg shadow-md hover:bg-blue-600 transition">
-              Become a member →
-            </button>
-          </div>
-        </div>
-      </nav>
+      <Header2 />  
       <div className="py-12 sm:px-6">
         {/* First Hero Section */}
 
