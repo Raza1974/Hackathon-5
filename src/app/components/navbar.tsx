@@ -23,7 +23,7 @@ export default function Navbar() {
             <span>(225) 555-0118</span>
           </div>
           <div className="flex items-center space-x-2">
-            <Image src="/icn mail.png" alt="hero" width={16} height={16} />
+            <Image src="/mail.jpg" alt="hero" width={16} height={16} />
             <span>michelle.rivera@example.com</span>
           </div>
         </div>
@@ -48,7 +48,7 @@ export default function Navbar() {
       </div>
 
       {/* Main Navigation */}
-      <div className="flex justify-between items-center px-4 md:px-10 py-4">
+      <div className="flex justify-between items-center px-4 md:px-10 py-4 ">
         <h1 className="text-2xl font-bold text-black">Bandage</h1>
 
         {/* Mobile Menu Toggle */}
@@ -71,67 +71,56 @@ export default function Navbar() {
           </a>
 
           {/* Shop Dropdown */}
-          <div
-            className="relative"
-            onMouseEnter={() => setIsShopDropdownOpen(true)}
-            onMouseLeave={() => setIsShopDropdownOpen(false)}
-          >
+          <div className="relative">
             <Button
               className="flex items-center text-slate-600 hover:text-black"
               onClick={() => setIsShopDropdownOpen(!isShopDropdownOpen)}
             >
-              <select
-                className="appearance-none bg-transparent px-4 py-2 focus:outline-none"
-                title="Shopping list"
-              >
-                <option>Shop</option>
-                <option>Shop1</option>
-                <option>Shop2</option>
-              </select>
+              Shop
               <RiArrowDropDownLine className="ml-2 text-slate-600 text-lg" />
             </Button>
-            <div
-              className={`absolute top-full mt-1 bg-white shadow-md rounded-md ${
-                isShopDropdownOpen ? "block" : "hidden"
-              }`}
-            >
-              <a
-                href="./shop"  // Link to Shop page
-                className="block px-4 py-2 text-slate-600 hover:bg-slate-100 hover:text-black"
-              >
-                Shop
-              </a>
-              <a
-                href="./Shop1"  // Link to Shop1 page
-                className="block px-4 py-2 text-slate-600 hover:bg-slate-100 hover:text-black"
-              >
-                Shop1
-              </a>
-              <a
-                href="./shop2"  // Link to Shop2 page
-                className="block px-4 py-2 text-slate-600 hover:bg-slate-100 hover:text-black"
-              >
-                Shop2
-              </a>
-            </div>
+            {isShopDropdownOpen && (
+              <div className="absolute top-full mt-1 bg-white shadow-md rounded-md">
+                <a
+                  href="/shop" // Link to Shop page
+                  className="block px-4 py-2 text-slate-600 hover:bg-slate-100 hover:text-black"
+                >
+                  Shop
+                </a>
+                <a
+                  href="/Shop1" // Link to Shop1 page
+                  className="block px-4 py-2 text-slate-600 hover:bg-slate-100 hover:text-black"
+                >
+                  Shop1
+                </a>
+                <a
+                  href="/Shop2" // Link to Shop2 page
+                  className="block px-4 py-2 text-slate-600 hover:bg-slate-100 hover:text-black"
+                >
+                  Shop2
+                </a>
+              </div>
+            )}
           </div>
 
-          <a href="./About" className="text-slate-600 hover:text-black hover:underline">
+          <a href="/about" className="text-slate-600 hover:text-black hover:underline">
             About
           </a>
-          <a href="./Blog" className="text-slate-600 hover:text-black hover:underline">
+          <a href="/blog" className="text-slate-600 hover:text-black hover:underline">
             Blog
           </a>
-          <a href="./Contact" className="text-slate-600 hover:text-black hover:underline">
+          <a href="/contact" className="text-slate-600 hover:text-black hover:underline">
             Contact
-          </a>
-          <a href="./Productlist" className="text-slate-600 hover:text-black hover:underline">
-            Pages
-          </a>
+          </a> 
+          <a href="/shop-page" className="text-slate-600 hover:text-black hover:underline">
+             Pages
+          </a> 
+         
         </nav>
 
         {/* Search and Icons */}
         <div className="hidden md:flex items-center space-x-2">
+          <Image src="/icn contact.jpg" alt="hero" width={16} height={16} />
           <a href="./login" className="text-blue-300 hover:text-black hover:underline">
             Login
           </a>

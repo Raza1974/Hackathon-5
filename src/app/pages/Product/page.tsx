@@ -50,6 +50,7 @@ import Image from "next/image";
 export default function Product() {
   return (
     <div>
+      
       {/* Featured Products Section */}
       <div>
         <div className="container mx-auto text-center   w-691 h-102 ">
@@ -77,7 +78,7 @@ export default function Product() {
         <div className="w-1050px h-500px flex justify-center items-center  ">
           <div className="editter">
             <Image
-              src="/fixed-height.jpg"
+              src="/f-product-1.jpg"
               alt="Hero"
               width={239}
               height={427}
@@ -107,7 +108,7 @@ export default function Product() {
           </div>
           <div className="editter">
             <Image
-              src="/fixed-height (1).jpg"
+              src="/f-product-2.jpg"
               alt="Hero"
               width={239}
               height={427}
@@ -137,7 +138,7 @@ export default function Product() {
           </div>
           <div className="editter">
             <Image
-              src="/fixed-height (2).jpg"
+              src="/f-product-3.jpg"
               alt="Hero"
               width={239}
               height={427}
@@ -167,7 +168,7 @@ export default function Product() {
           </div>
           <div className="editter">
             <Image
-              src="/product-cover-5.jpg"
+              src="/f-product-4.jpg"
               alt="Hero"
               width={239}
               height={427}
@@ -200,7 +201,7 @@ export default function Product() {
         <div className="w-1050px h-500px flex justify-center items-center">
           <div className="editter">
             <Image
-              src="/product-cover-5 (1).jpg"
+              src="/f-product-5.jpg"
               alt="Hero"
               width={239}
               height={427}
@@ -226,12 +227,13 @@ export default function Product() {
                 <span className="w-3 h-3 rounded-full bg-red-500"></span>
                 <span className="w-3 h-3 rounded-full bg-yellow-500"></span>
               </div>
+              <br></br>
             </div>
           </div>
 
           <div className="editter">
             <Image
-              src="/product-cover-5 (2).jpg"
+              src="/f-product-6.jpg"
               alt="Hero"
               width={239}
               height={427}
@@ -257,12 +259,13 @@ export default function Product() {
                 <span className="w-3 h-3 rounded-full bg-red-500"></span>
                 <span className="w-3 h-3 rounded-full bg-yellow-500"></span>
               </div>
+              <br></br>
             </div>
           </div>
 
           <div className="editter">
             <Image
-              src="/product-cover-5 (3).jpg"
+              src="/f-product-7.jpg"
               alt="Hero"
               width={239}
               height={427}
@@ -287,13 +290,14 @@ export default function Product() {
                 <span className="w-3 h-3 rounded-full bg-green-500"></span>
                 <span className="w-3 h-3 rounded-full bg-red-500"></span>
                 <span className="w-3 h-3 rounded-full bg-yellow-500"></span>
-              </div>{" "}
+              </div>
+              <br></br>
             </div>
           </div>
 
           <div className="editter">
             <Image
-              src="/fixed-height (3).jpg"
+              src="/f-product-8.jpg"
               alt="Hero"
               width={239}
               height={427}
@@ -319,6 +323,7 @@ export default function Product() {
                 <span className="w-3 h-3 rounded-full bg-red-500"></span>
                 <span className="w-3 h-3 rounded-full bg-yellow-500"></span>
               </div>
+              <br></br>
             </div>
           </div>
         </div>

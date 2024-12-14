@@ -1,9 +1,13 @@
 import React from 'react';
-
-import { ProductCard } from "../components/Shop/ProductCard";
-import { CategoryCard } from "../components/Shop/CategoryCard";
-import { BrandLogo } from "../components/Shop/BrandLogo";
+import { ProductCard } from "@/app/components/Shop/ProductCard";
+import { CategoryCard } from "@/app/components/Shop/CategoryCard";
+import { BrandLogo } from "@/app/components/Shop/BrandLogo";
 import Link from 'next/link';
+import Header from '@/app/components/header';
+
+
+
+
 const products = [
   {
     imageSrc: "/fixed-height (9).jpg",
@@ -105,6 +109,9 @@ const products = [
     // Add the rest of the products here
 ];
 
+
+
+
 const categories = [
   {
     imageSrc: "/card-item (3).jpg",
@@ -183,6 +190,9 @@ const brands = [
 
 const ShopPage: React.FC = () => {
   return (
+    <>
+
+    <Header />
 <div>
 
       <nav className="flex overflow-hidden flex-col justify-center items-center py-6 w-full font-bold text-center whitespace-nowrap bg-neutral-50 max-md:max-w-full">
@@ -202,7 +212,8 @@ const ShopPage: React.FC = () => {
           </div>
         </div>
       </nav>
-
+    
+{/* Categories Section */}
       <section className="flex overflow-hidden flex-col justify-center items-center px-20 w-full text-white bg-neutral-50 max-md:px-5 max-md:max-w-full">
         <div className="flex overflow-hidden flex-col items-center pb-12 max-md:max-w-full">
           <div className="flex overflow-hidden flex-wrap gap-4 items-start max-md:max-w-full">
@@ -212,7 +223,7 @@ const ShopPage: React.FC = () => {
           </div>
         </div>
       </section>
-
+{/* Brands Section */}
       <section className="flex overflow-hidden flex-col justify-center items-center px-20 w-full bg-neutral-50 max-md:px-5 max-md:max-w-full">
         <div className="flex overflow-hidden flex-col items-center w-full max-w-[1050px] max-md:max-w-full">
           <div className="flex overflow-hidden flex-wrap gap-8 justify-center items-center py-12 max-md:max-w-full">
@@ -222,7 +233,7 @@ const ShopPage: React.FC = () => {
           </div>
         </div>
       </section>
-
+{/* Products Section */}
       <section className="flex overflow-hidden flex-col items-center px-20 w-full bg-white max-md:px-5 max-md:max-w-full">
         <div className="flex overflow-hidden flex-col justify-center items-center py-12 w-full max-w-[1124px] max-md:max-w-full">
           <div className="flex flex-wrap gap-8 items-start max-md:max-w-full">
@@ -230,12 +241,35 @@ const ShopPage: React.FC = () => {
               <ProductCard key={index} {...product} />
             ))}
           </div>
+         <div className="flex justify-center gap-0">   
+           <div className="overflow-hidden self-stretch my-auto text-3xl tracking-normal leading-none  text-slate-800 w-[84px] h-[74px] ">
+            First
+          </div>
+          <div className="overflow-hidden self-stretch my-auto text-2xl tracking-normal leading-none  text-slate-800 w-[84px] h-[74px] ">
+            1
+          </div>
+          <div className="overflow-hidden self-stretch my-auto text-2xl tracking-normal leading-none  text-slate-800 w-[84px] h-[74px]">
+            2
+          </div>
+          <div className="overflow-hidden self-stretch my-auto text-2xl tracking-normal leading-none  text-slate-800 w-[84px] h-[74px]">
+            3
+          </div>
+          <div className="overflow-hidden self-stretch my-auto text-3xl tracking-normal leading-none  text-slate-800 w-[84px] h-[74px] ">
+          Next
+          </div>
+         
+          
+
+  </div>
         </div>
       </section>
-
+ 
+      
   
     </div>
+    </>
   );
 };
 
 export default ShopPage;
+
