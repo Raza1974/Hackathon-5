@@ -7,22 +7,25 @@ export default function About() {
     <div>
     
       <Header2 />
-      <div className="py-12 sm:px-6">
+      <div className="py-12 sm:px-6 ">
         {/* First Hero Section */}
 
         <div className="relative w-full h-screen bg-white flex items-center">
-          <div className="absolute inset-0 flex flex-col justify-center items-center sm:items-start p-8 sm:p-12">
+          <div className="absolute inset-0 flex flex-col w-[1440px] h-[729px] justify-center items-center sm:items-start p-8 sm:p-12">
             <div className=" flex-col mt-90 text-center lg:text-left">
-              <h4 className="font-montserrat font-bold text-[14px] sm:text-[16px] leading-[20px] sm:leading-[24px] tracking-[0.1px] text-gray-500">
+              <h4 className="font-montserrat  font-bold text-[14px] sm:text-[16px] leading-[20px] sm:leading-[24px] tracking-[0.1px] text-gray-500">
                 ABOUT COMPANY
               </h4>
+              <br></br>
               <h1 className="font-montserrat font-bold text-[40px] sm:text-[58px] leading-[56px] sm:leading-[80px] tracking-[0.2px] text-gray-900">
                 ABOUT US
               </h1>
+              <br></br>
               <p className="text-gray-600">
                 We know how large objects will act, <br />
                 but things on a small scale.
               </p>
+              <br></br>
               <button className="bg-blue-500 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-600 transition">
                 Get Quote Now
               </button>
@@ -232,6 +235,9 @@ export default function About() {
           </div>
         </div>
         <div>
+          <br></br>
+          <br></br>
+          <br></br>
           <div className="py-12 px-4 sm:px-6 lg:px-8">
             <div className="max-w-[1440px] mx-auto text-center">
               <h2 className="text-2xl font-bold text-gray-800">
@@ -277,24 +283,23 @@ export default function About() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col lg:flex-row items-center w-[1440px] h-[637px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div className=" w-1050px h-412px bg-blue-500 text-white p-8  flex-1 h-full">
+          <div className=" mt-[112px] mb-[112px] flex flex-col lg:flex-row items-center w-[1440px] h-[636px]  px-4 sm:px-6 lg:px-8 ">
+            <div className=" about-work w-1050px h-412px justify-center text-center   text-white p-8  flex-1 h-full">
               
-              <h4 className="text-sm font-medium uppercase mt-40 ml-10">
+              <h4 className="text-sm font-medium uppercase mt-40 ml-44 text-left">
                 Work With Us
               </h4>
               <h2 className="text-3xl font-bold mb-4">Now Let’s grow Yours</h2>
-              <p className="text-sm text-blue-200 mb-6">
-                The gradual accumulation of information about atomic and
-                small-scale behavior during the first quarter of the 20th
-                century.
+              <p className="text-sm text-blue-200 mb-6 ml-11">
+              The gradual accumulation of information about atomic 
+              and <br></br> small-scale behavior during the first quarter of the 20th 
               </p>
-              <button className="border border-white px-12 py-186  hover:bg-white hover:text-blue-500 transition">
+              <button className=" w-[132px] h-[52px] border border-white px-12 py-186 mr-40  transition">
                 Button
               </button>
             </div>
             
-            <div className="flex-1">
+            <div className="flex-1 mr-60 w-[590px] h-[640px] ">
               <img
                 src="/fixed-height (6).jpg"
                 alt="Company"

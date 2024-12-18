@@ -2,18 +2,13 @@
 
 import Link from "next/link";
 
-
-
-
-
-
 const Header2 = () => {
  
   return (
     
-    <nav className="bg-white py-4 px-6 shadow-md">
-    <div className="max-w-[1440px] mx-auto flex items-center justify-between">
-      <div className=" ml-12 font-montserrat font-bold text-[24px] sm:text-[24px] leading-[56px] sm:leading-[80px] tracking-[0.2px] text-gray-900">Bandage</div>
+    <nav className="header2 ">
+    <div className="max-w-[1320px] mr-20 flex items-center justify-between">
+      <div className=" ml-16 font-montserrat font-bold text-[24px] sm:text-[24px]  text-gray-900">Bandage</div>
           {/* Logo */}
          
 
@@ -27,7 +22,7 @@ const Header2 = () => {
     
                          <li>
               <Link
-                href="/product"
+                href="/DesktopProduct"
                 className="hover:underline hover:text-blue-500"
               >
                 Product

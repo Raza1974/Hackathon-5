@@ -3,192 +3,586 @@ import Header2 from "@/app/components/header2";
 export default function Pricing() {
   return (
     <div>
-      <Header2 />
-      <div className="py-12 sm:px-6">
-        {/* First Hero Section */}
-        <div className="relative w-full h-screen bg-white flex items-center">
-          <div className="absolute inset-0 flex flex-col justify-center items-center sm:items-start p-8 sm:p-12">
-            <div className="flex-col mt-90 text-center lg:text-left">
-              <h4 className="font-montserrat font-bold text-[14px] sm:text-[16px] leading-[20px] sm:leading-[24px] tracking-[0.1px] text-gray-500">
-                PRICING
-              </h4>
-              <h1 className="font-montserrat font-bold text-[40px] sm:text-[58px] leading-[56px] sm:leading-[80px] tracking-[0.2px] text-gray-900">
-                Simple Pricing
-              </h1>
-              <p className="text-gray-600">
-                Problems trying to resolve the conflict between <br></br>
-                the two major realms of Classical physics: Newtonian mechanics
-              </p>
-              <button className="bg-blue-500 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-600 transition">
-                Get Quote Now
-              </button>
+      
+      
+    <div className="w-full min-h-screen bg-[#FAFAFA]">
+
+      <div className="w-full max-w-[1050px] mx-auto py-[48px] px-4 lg:py-[112px] lg:px-0 flex flex-col gap-[48px]">
+       {/* Navbar + Intro Section */}
+       <div className="w-full h-auto bg-white rounded-lg shadow-md">
+            <div className="w-full h-auto bg-white/50">
+              <Header2 />
+        {/* Pricing Section */}
+        <div className="w-full max-w-[870px] mx-auto mt-[32px] lg:mt-[64px] flex flex-col items-center space-y-[16px] px-4">
+          <h5 className="text-[#737373] text-[16px] font-bold leading-[24px] tracking-[0.1px] text-center">
+            PRICING
+          </h5>
+          <h2 className="text-[#252B42] text-[32px] lg:text-[58px] font-bold leading-[40px] lg:leading-[80px] tracking-[0.2px] text-center">
+            Simple Pricing
+          </h2>
+          <div className="flex items-center space-x-[8px] lg:space-x-[15px]">
+            <a
+              className="text-[#252B42] text-[14px] font-bold leading-[24px] tracking-[0.2px]"
+              href="#"
+            >
+              Home
+            </a>
+            <div className="w-[9px] h-[16px]">
+              <img src="/Vector (13).png" alt="arrow" />
             </div>
+            <span className="text-[#737373] text-[14px] font-bold leading-[24px] tracking-[0.2px]">
+              Pricing
+            </span>
           </div>
-          <div className="w-[55px] ml-28 sm:block">
-            <img src="/your-image-path.jpg" alt="About Us" />
+          </div>
+          </div>
           </div>
         </div>
+      </div>
 
-        <div className="bg-white py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-[1440px] mx-auto space-y-12">
-            <h2 className="text-xl font-semibold text-red-500">Problems trying</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <h1 className="text-2xl font-bold text-gray-900">
-                Met minim Mollie non desert <br></br>Alamo est sit cliquey dolor do <br></br> met sent.
-              </h1>
-              <p className="text-gray-600">
-                Problems trying to resolve the conflict between the two major
-                realms of Classical physics: Newtonian mechanics.
-              </p>
-            </div>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
-              <div>
-                <h3 className="text-2xl font-bold text-gray-900">15K</h3>
-                <p className="text-sm text-gray-600">Happy Customers</p>
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold text-gray-900">150K</h3>
-                <p className="text-sm text-gray-600">Monthly Visitors</p>
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold text-gray-900">15</h3>
-                <p className="text-sm text-gray-600">Countries Worldwide</p>
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold text-gray-900">100+</h3>
-                <p className="text-sm text-gray-600">Top Partners</p>
-              </div>
-            </div>
-            <div className="relative w-full h-[764px]">
-              <img
-                src="/desktop-video-3.jpg"
-                alt="Video Thumbnail"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
+      {/* Short Intro Section */}
+      <div className=" flex flex-col items-center justify-center px-4 lg:px-0 space-y-[16px]">
+        <div className="flex flex-col items-center w-full max-w-[625px] space-y-[8px]">
+          <h2 className="text-[#252B42] text-[32px] lg:text-[40px] font-montserrat font-bold leading-[40px] lg:leading-[50px] tracking-[0.2px] text-center">
+            Pricing
+          </h2>
+          <p className="text-[#737373] text-[14px] leading-[20px] text-center tracking-[0.2px]">
+            Problems trying to resolve the conflict between the two major realms
+            of Classical physics: Newtonian mechanics
+          </p>
+        </div>
+      </div>
+
+      {/* TOGGLE BUTTON */}
+      <div className="relative flex flex-row items-center justify-center gap-4 w-full max-w-md mx-auto px-4">
+        {/* Monthly Label */}
+        <h5 className="text-[16px] font-Montserrat font-bold text-[#252B42] leading-[24px] tracking-[0.1px]">
+          Monthly
+        </h5>
+
+        {/* Toggle Switch */}
+        <div className="relative flex items-center w-[45px] h-[25px] bg-white border border-[#23A6F0] rounded-full">
+          <div className="absolute w-[19px] h-[19px] bg-[#D0D0D0] rounded-full left-1 top-[3px] transition-transform transform-gpu"></div>
         </div>
 
-        <div className="bg-white py-3 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-[1440px] mx-auto text-center">
-            <h2 className="text-3xl font-bold text-gray-800">Meet Our Team</h2>
-            <p className="text-gray-600 text-sm mt-2">
-              Problems trying to resolve the conflict between the two major
-              realms of Classical physics: Newtonian mechanics.
-            </p>
-            <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="text-center flex flex-col items-center">
-                <div className="w-40 h-40 overflow-hidden mb-4">
-                  <img
-                    src="/team-1-user-3 (2).jpg"
-                    alt="Username"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-800">Username</h3>
-                <p className="text-sm text-gray-500">Profession</p>
-                <div className="flex gap-4 mt-4">
-                  <a
-                    href="https://facebook.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src="/Vector (2).jpg"
-                      alt="Facebook"
-                      className="w-5 h-5 bg-blue-900"
-                    />
-                  </a>
-                  <a
-                    href="https://instagram.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src="/ant-design_instagram-outlined.jpg"
-                      alt="Instagram"
-                      className="w-5 h-5 bg-blue-900"
-                    />
-                  </a>
-                  <a
-                    href="https://twitter.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src="/twitter.jpg"
-                      alt="Twitter"
-                      className="w-5 h-5 bg-blue-900"
-                    />
-                  </a>
-                </div>
-              </div>
-              {/* Repeat for other team members */}
-            </div>
-          </div>
-        </div>
+        {/* Yearly Label */}
+        <h5 className="text-[16px] font-Montserrat font-bold text-[#252B42] leading-[24px] tracking-[0.1px]">
+          Yearly
+        </h5>
 
-        <div className="py-12 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-[1440px] mx-auto text-center">
-            <h2 className="text-2xl font-bold text-gray-800">Big Companies Are Here</h2>
-            <p className="text-gray-600 text-sm mt-2">
-              Problems trying to resolve the conflict between the two major
-              realms of Classical physics: Newtonian mechanics.
-            </p>
-            <div className="bg-gray-50 py-8 mt-12">
-              <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap justify-center items-center gap-8">
-                <img
-                  src="/fa-brands_hooli.jpg"
-                  alt="icon1"
-                  className="w-20 h-20 object-contain"
-                />
-                <img
-                  src="/col-md-2.jpg"
-                  alt="icon2"
-                  className="w-20 h-20 object-contain"
-                />
-                <img
-                  src="/col-md-3.jpg"
-                  alt="icon3"
-                  className="w-20 h-20 object-contain"
-                />
-                <img
-                  src="/col-md-4 (3).jpg"
-                  alt="icon4"
-                  className="w-20 h-20 object-contain"
-                />
-                <img
-                  src="/col-md-3 (4).jpg"
-                  alt="icon5"
-                  className="w-20 h-20 object-contain"
-                />
-                <img
-                  src="/col-md-6 (5).jpg"
-                  alt="icon6"
-                  className="w-20 h-20 object-contain"
-                />
+        {/* Save Button */}
+        <button className="flex items-center justify-center p-2 w-28 h-11 bg-[#B3E3FF] rounded-[37px]">
+          <h6 className="text-[14px] font-Montserrat font-bold text-[#23A6F0] text-center tracking-[0.2px]">
+            Save 25%
+          </h6>
+        </button>
+      </div>
+
+      {/* THREE DIVS */}
+
+      <div className="w-full lg:flex lg:flex-row flex-col gap-[20px]">
+        {/* one */}
+        <div className="w-[327px] h-[664px]">
+          <div className="border rounded-[10px] items-center justify-center border-[#23A6F0] px-[40px] py-[50px] flex flex-col gap-[35px] bg-[#FFFFFF]">
+            <h3 className="w-[64px] h-[32px] font-Montserrat font-bold text-[24px] leading-[32px] tracking-[0.1px] text-[#252B42]">
+              FREE
+            </h3>
+            <h5 className="w-[160px] h-[48px] font-Montserrat font-bold text-[16px] leading-[24px] flex justify-center items-center text-[#737373] tracking-[0.1px]">
+              Organize across all apps by hand
+            </h5>
+            <div className="w-[114px] h-[56px] flex gap-[10px]">
+              <h2 className="w-[28px] h-[50px] font-Montserrat font-bold text-[40px] leading-[50px] tracking-[0.2px] text-[#23A6F0]">
+                0
+              </h2>
+              <div className="w-[76px] h-[56px]">
+                <h3 className="w-[16px] h-[32px] font-Montserrat font-bold text-[24px] leading-[32px] tracking-[0.1px] text-[#23A6F0]">
+                  $
+                </h3>
+                <h6 className="w-[76px] h-[24px] font-Montserrat font-bold text-[14px] leading-[24px] tracking-[0.2px] text-[#8EC2F2]">
+                  Per Month
+                </h6>
               </div>
             </div>
-          </div>
-        </div>
-
-        <div className="flex flex-col lg:flex-row items-center w-full mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="w-full lg:w-2/3 bg-blue-500 text-white p-8 flex-1">
-            <h4 className="text-sm font-medium uppercase mt-20 ml-10">Work With Us</h4>
-            <h2 className="text-3xl font-bold mb-4">Now Let’s grow Yours</h2>
-            <p className="text-sm text-blue-200 mb-6">
-              The gradual accumulation of information about atomic and small-scale behavior during the first quarter of the 20th century.
-            </p>
-            <button className="border border-white px-12 py-3 hover:bg-white hover:text-blue-500 transition">
-              Button
+            <div className="w-[247px] h-[236px] flex flex-col gap-[15px]">
+              <div className="w-[247px] h-[32px] flex gap-[10px]">
+                <img
+                  src="/icn-circle circle-xs secondary-color-1.png"
+                  alt="circle"
+                />
+                <h6 className="w-[205px] font-Montserrat font-bold text-[14px] leading-[24px] tracking-[0.2px] text-[#252B42]">
+                  Unlimited product updates
+                </h6>
+              </div>
+              <div className="w-[247px] h-[32px] flex gap-[10px]">
+                <img
+                  src="/icn-circle circle-xs secondary-color-1.png"
+                  alt="circle"
+                />
+                <h6 className="w-[205px] font-Montserrat font-bold text-[14px] leading-[24px] tracking-[0.2px] text-[#252B42]">
+                  Unlimited product updates
+                </h6>
+              </div>
+              <div className="w-[247px] h-[32px] flex gap-[10px]">
+                <img
+                  src="/icn-circle circle-xs secondary-color-1.png"
+                  alt="circle"
+                />
+                <h6 className="w-[205px] font-Montserrat font-bold text-[14px] leading-[24px] tracking-[0.2px] text-[#252B42]">
+                  Unlimited product updates
+                </h6>
+              </div>
+              <div className="w-[247px] h-[32px] flex gap-[10px]">
+                <img
+                  src="/icn-circle circle-xs secondary-color-1.png"
+                  alt="circle"
+                />
+                <h6 className="w-[205px] font-Montserrat font-bold text-[14px] leading-[24px] tracking-[0.2px] text-[#252B42]">
+                  1GB Cloud storage
+                </h6>
+              </div>
+              <div className="w-[247px] h-[32px] flex gap-[10px]">
+                <img
+                  src="/icn-circle circle-xs secondary-color-1.png"
+                  alt="circle"
+                />
+                <h6 className="w-[205px] font-Montserrat font-bold text-[14px] leading-[24px] tracking-[0.2px] text-[#252B42]">
+                  Email and community support
+                </h6>
+              </div>
+            </div>
+            {/* button */}
+            <button className="w-[246px] h-[52px] rounded-[5px] px-[40px] py-[15px] flex gap-[10px] items-center justify-center bg-[#23A6F0]">
+              <h6 className="font-Montserrat font-bold text-[14px] leading-[22px] tracking-[0.2px] text-white">
+                Try for free
+              </h6>
             </button>
           </div>
-          <div className="flex-1">
-            <img
-              src="/fixed-height (6).jpg"
-              alt="Company"
-              className="w-full object-cover"
-            />
+        </div>
+
+        {/* two */}
+        <div className="w-[327px] h-[664px]">
+          <div className="border rounded-[10px] items-center justify-center border-[#23A6F0] px-[40px] py-[70px] flex flex-col gap-[35px] bg-[#252B42]">
+            <h3 className="w-[64px] h-[32px] font-Montserrat font-bold text-[24px] leading-[32px] tracking-[0.1px] text-white">
+              STANDARD
+            </h3>
+            <h5 className="w-[160px] h-[48px] font-Montserrat font-bold text-[16px] leading-[24px] flex justify-center items-center text-white tracking-[0.1px]">
+              Organize across all apps by hand
+            </h5>
+            <div className="w-[174px] h-[56px] flex gap-[10px]">
+              <h2 className="w-[88px] h-[50px] font-Montserrat font-bold text-[40px] leading-[50px] tracking-[0.2px] text-[#23A6F0]">
+                9.99
+              </h2>
+              <div className="w-[76px] h-[56px]">
+                <h3 className="w-[16px] h-[32px] font-Montserrat font-bold text-[24px] leading-[32px] tracking-[0.1px] text-[#23A6F0]">
+                  $
+                </h3>
+                <h6 className="w-[76px] h-[24px] font-Montserrat font-bold text-[14px] leading-[24px] tracking-[0.2px] text-[#8EC2F2]">
+                  Per Month
+                </h6>
+              </div>
+            </div>
+            <div className="w-[247px] h-[236px] flex flex-col gap-[15px]">
+              <div className="w-[247px] h-[32px] flex gap-[10px]">
+                <img
+                  src="/icn-circle circle-xs secondary-color-1.png"
+                  alt="circle"
+                />
+                <h6 className="w-[205px] font-Montserrat font-bold text-[14px] leading-[24px] tracking-[0.2px] text-white">
+                  Unlimited product updates
+                </h6>
+              </div>
+              <div className="w-[247px] h-[32px] flex gap-[10px]">
+                <img
+                  src="/icn-circle circle-xs secondary-color-1.png"
+                  alt="circle"
+                />
+                <h6 className="w-[205px] font-Montserrat font-bold text-[14px] leading-[24px] tracking-[0.2px] text-white">
+                  Unlimited product updates
+                </h6>
+              </div>
+              <div className="w-[247px] h-[32px] flex gap-[10px]">
+                <img
+                  src="/icn-circle circle-xs secondary-color-1.png"
+                  alt="circle"
+                />
+                <h6 className="w-[205px] font-Montserrat font-bold text-[14px] leading-[24px] tracking-[0.2px] text-white">
+                  Unlimited product updates
+                </h6>
+              </div>
+              <div className="w-[247px] h-[32px] flex gap-[10px]">
+                <img
+                  src="/icn-circle circle-xs secondary-color-1.png"
+                  alt="circle"
+                />
+                <h6 className="w-[205px] font-Montserrat font-bold text-[14px] leading-[24px] tracking-[0.2px] text-white">
+                  1GB Cloud storage
+                </h6>
+              </div>
+              <div className="w-[247px] h-[32px] flex gap-[10px]">
+                <img
+                  src="/icn-circle circle-xs secondary-color-1.png"
+                  alt="circle"
+                />
+                <h6 className="w-[205px] font-Montserrat font-bold text-[14px] leading-[24px] tracking-[0.2px] text-white">
+                  Email and community support
+                </h6>
+              </div>
+            </div>
+            {/* button */}
+            <button className="w-[246px] h-[52px] rounded-[5px] px-[40px] py-[15px] flex gap-[10px] items-center justify-center bg-[#23A6F0]">
+              <h6 className="font-Montserrat font-bold text-[14px] leading-[22px] tracking-[0.2px] text-white">
+                Try for free
+              </h6>
+            </button>
+          </div>
+        </div>
+
+        {/* three */}
+        <div className="w-[327px] h-[664px] ">
+          <div className="border rounded-[10px] items-center justify-center border-[#23A6F0] px-[40px] py-[50px] flex flex-col gap-[35px] bg-[#FFFFFF]">
+            <h3 className="w-[64px]  h-[32px] font-Montserrat font-bold text-[24px] leading-[32px] tracking-[0.1px] text-[#252B42]">
+              PREMIUM
+            </h3>
+            <h5 className="w-[160px] h-[48px] font-Montserrat font-bold text-[16px] leading-[24px] flex justify-center items-center text-[#737373] tracking-[0.1px]">
+              Organize across all apps by hand
+            </h5>
+            <div className="w-[194px] h-[56px] flex gap-[10px]">
+              <h2 className="w-[104px] h-[50px] font-Montserrat font-bold text-[40px] leading-[50px] tracking-[0.2px] text-[#23A6F0]">
+                19.9
+              </h2>
+              <div className="w-[76px] h-[56px]">
+                <h3 className="w-[16px] h-[32px] font-Montserrat font-bold text-[24px] leading-[32px] tracking-[0.1px] text-[#23A6F0]">
+                  $
+                </h3>
+                <h6 className="w-[76px] h-[24px] font-Montserrat font-bold text-[14px] leading-[24px] tracking-[0.2px] text-[#8EC2F2]">
+                  Per Month
+                </h6>
+              </div>
+            </div>
+            <div className="w-[247px] h-[236px] flex flex-col gap-[15px]">
+              <div className="w-[247px] h-[32px] flex gap-[10px]">
+                <img
+                  src="/icn-circle circle-xs secondary-color-1.png"
+                  alt="circle"
+                />
+                <h6 className="w-[205px] font-Montserrat font-bold text-[14px] leading-[24px] tracking-[0.2px] text-[#252B42]">
+                  Unlimited product updates
+                </h6>
+              </div>
+              <div className="w-[247px] h-[32px] flex gap-[10px]">
+                <img
+                  src="/icn-circle circle-xs secondary-color-1.png"
+                  alt="circle"
+                />
+                <h6 className="w-[205px] font-Montserrat font-bold text-[14px] leading-[24px] tracking-[0.2px] text-[#252B42]">
+                  Unlimited product updates
+                </h6>
+              </div>
+              <div className="w-[247px] h-[32px] flex gap-[10px]">
+                <img
+                  src="/icn-circle circle-xs secondary-color-1.png"
+                  alt="circle"
+                />
+                <h6 className="w-[205px] font-Montserrat font-bold text-[14px] leading-[24px] tracking-[0.2px] text-[#252B42]">
+                  Unlimited product updates
+                </h6>
+              </div>
+              <div className="w-[247px] h-[32px] flex gap-[10px]">
+                <img
+                  src="/icn-circle circle-xs secondary-color-1.png"
+                  alt="circle"
+                />
+                <h6 className="w-[205px] font-Montserrat font-bold text-[14px] leading-[24px] tracking-[0.2px] text-[#252B42]">
+                  1GB Cloud storage
+                </h6>
+              </div>
+              <div className="w-[247px] h-[32px] flex gap-[10px]">
+                <img
+                  src="/icn-circle circle-xs secondary-color-1.png"
+                  alt="circle"
+                />
+                <h6 className="w-[205px] font-Montserrat font-bold text-[14px] leading-[24px] tracking-[0.2px] text-[#252B42]">
+                  Email and community support
+                </h6>
+              </div>
+            </div>
+            {/* button */}
+            <button className="w-[246px] h-[52px] rounded-[5px] px-[40px] py-[15px] flex gap-[10px] items-center justify-center bg-[#23A6F0]">
+              <h6 className="font-Montserrat font-bold text-[14px] leading-[22px] tracking-[0.2px] text-white">
+                Try for free
+              </h6>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* COMPANIES */}
+      <div>
+        <div className="w-full h-auto bg-[#FAFAFA]">
+          <div className="max-w-[1050px] mx-auto py-[80px]">
+            <h4 className="text-center font-Montserrat text-[20px] text-[#252B42] font-normal leading-[30px] tracking-[0.2px]">
+              Trusted By Over 4000 Big Companies
+            </h4>
+            <div className="w-full py-[50px] flex justify-center">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
+                <div className="flex justify-center">
+                  <img
+                    src="/images/card-item (1) (1).png"
+                    alt="Client 1 Logo"
+                    className="h-12 w-auto"
+                  />
+                </div>
+                <div className="flex justify-center">
+                  <img
+                    src="/col-md-2.jpg"
+                    alt="Client 2 Logo"
+                    className="h-12 w-auto"
+                  />
+                </div>
+                <div className="flex justify-center">
+                  <img
+                    src="/col-md-3 .jpg"
+                    alt="Client 3 Logo"
+                    className="h-12 w-auto"
+                  />
+                </div>
+                <div className="flex justify-center">
+                  <img
+                    src="/col-md-4 (3).jpg"
+                    alt="Client 4 Logo"
+                    className="h-12 w-auto"
+                  />
+                </div>
+                <div className="flex justify-center">
+                  <img
+                    src="/col-md-3 (4).jpg"
+                    alt="Client 5 Logo"
+                    className="h-12 w-auto"
+                  />
+                </div>
+                <div className="flex justify-center">
+                  <img
+                    src="/images/card-item (1) (1).png"
+                    alt="Client 6 Logo"
+                    className="h-12 w-auto"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/*white div */}
+      <div className=" lg:block hidden w-[1440px] h-[1037px] bg-white">
+        <div className="w-[1056px] h-[1037px] absolute left-[192px] py-[80px] flex flex-col items-center gap-[50px]">
+          {/* faqs text */}
+          <div className="w-[1050px] h-[210px] py-[45px] flex flex-col items-center">
+            <div className="w-[651px] h-[120px] flex flex-col items-center">
+              <div className="w-[607px] h-[120px] flex flex-col justify-center items-center gap-[10px]">
+                <h2 className="w-[262px] h-[50px] font-Montserrat font-bold text-[40px] text-[#252B42] leading-[50px] tracking-[0.2px] text-center">
+                  Pricing FAQs
+                </h2>
+                <h4 className="w-[552px] h-[60px] font-Montserrat font-normal text-center text-[20px] text-[#737373] leading-[30px] tracking-[0.2px]">
+                  Problems trying to resolve the conflict between the two major
+                  realms of Classical physics
+                </h4>
+              </div>
+            </div>
+          </div>
+          {/* answers to faqc */}
+          <div className="lg:w-[1056px] lg:h-[537px] lg:relative absolute  flex flex-col gap-[30px]">
+            {/* one */}
+            <div className="flex flex-row items-center gap-[30px] w-[1056px] h-[159px]">
+              <div className="flex flex-col items-start w-[491px] h-[159px]">
+                <div className="flex flex-col items-start p-[25px] w-[491px] h-[159px] rounded-[9px]">
+                  <div className="flex flex-row items-start gap-[20px] w-[437px] h-[109px]">
+                    {/* icn arrow-right */}
+                    <div className="w-[9px] h-[16px] flex-none">
+                      <img src="/icn arrow-right icn-xs.png" alt="arrow2" />
+                    </div>
+
+                    <div className="flex flex-col items-start gap-[5px] w-[408px] h-[109px]">
+                      <h5 className="w-[309px] h-[24px] font-Montserrat font-bold text-[16px] leading-[24px] tracking-[0.1px] text-[#252B42]">
+                        the quick fox jumps over the lazy dog
+                      </h5>
+
+                      <h6 className="w-[408px] h-[80px] font-Montserrat font-normal text-[14px] leading-[20px] tracking-[0.2px] text-[#737373]">
+                        Met minim Mollie non desert Alamo est sit cliquey dolor
+                        do met sent. RELIT official consequent door ENIM RELIT
+                        Mollie. Excitation venial consequent sent nostrum met.
+                      </h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex flex-col items-start w-[535px] h-[139px]">
+                <div className="flex flex-col items-start p-[25px] w-[535px] h-[139px] rounded-[9px]">
+                  <div className="flex flex-row items-start gap-[20px] w-[493px] h-[89px]">
+                    {/* icn arrow-right */}
+                    <div className="w-[9px] h-[16px] flex-none">
+                      <img src="/right-arrow.jpg" alt="arrow2" />
+                    </div>
+
+                    <div className="flex flex-col items-start gap-[5px] w-[464px] h-[89px]">
+                      <h5 className="w-[309px] h-[24px] font-Montserrat font-bold text-[16px] leading-[24px] tracking-[0.1px] text-[#252B42]">
+                        the quick fox jumps over the lazy dog
+                      </h5>
+
+                      <h6 className="w-[464px] h-[60px] font-Montserrat font-normal text-[14px] leading-[20px] tracking-[0.2px] text-[#737373]">
+                        Met minim Mollie non desert Alamo est sit cliquey dolor
+                        do met sent. RELIT official consequent door ENIM RELIT
+                        Mollie. Excitation venial consequent sent nostrum met.
+                      </h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* two */}
+            <div className="flex flex-row items-center gap-[30px] w-[1056px] h-[159px]">
+              <div className="flex flex-col items-start w-[491px] h-[159px]">
+                <div className="flex flex-col items-start p-[25px] w-[491px] h-[159px] rounded-[9px]">
+                  <div className="flex flex-row items-start gap-[20px] w-[437px] h-[109px]">
+                    {/* icn arrow-right */}
+                    <div className="w-[9px] h-[16px] flex-none">
+                      <img src="/right-arrow.jpg" alt="arrow2" />
+                    </div>
+
+                    <div className="flex flex-col items-start gap-[5px] w-[408px] h-[109px]">
+                      <h5 className="w-[309px] h-[24px] font-Montserrat font-bold text-[16px] leading-[24px] tracking-[0.1px] text-[#252B42]">
+                        the quick fox jumps over the lazy dog
+                      </h5>
+
+                      <h6 className="w-[408px] h-[80px] font-Montserrat font-normal text-[14px] leading-[20px] tracking-[0.2px] text-[#737373]">
+                        Met minim Mollie non desert Alamo est sit cliquey dolor
+                        do met sent. RELIT official consequent door ENIM RELIT
+                        Mollie. Excitation venial consequent sent nostrum met.
+                      </h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex flex-col items-start w-[535px] h-[139px]">
+                <div className="flex flex-col items-start p-[25px] w-[535px] h-[139px] rounded-[9px]">
+                  <div className="flex flex-row items-start gap-[20px] w-[493px] h-[89px]">
+                    {/* icn arrow-right */}
+                    <div className="w-[9px] h-[16px] flex-none">
+                      <img src="/right-arrow.jpg" alt="arrow2" />
+                    </div>
+
+                    <div className="flex flex-col items-start gap-[5px] w-[464px] h-[89px]">
+                      <h5 className="w-[309px] h-[24px] font-Montserrat font-bold text-[16px] leading-[24px] tracking-[0.1px] text-[#252B42]">
+                        the quick fox jumps over the lazy dog
+                      </h5>
+
+                      <h6 className="w-[464px] h-[60px] font-Montserrat font-normal text-[14px] leading-[20px] tracking-[0.2px] text-[#737373]">
+                        Met minim Mollie non desert Alamo est sit cliquey dolor
+                        do met sent. RELIT official consequent door ENIM RELIT
+                        Mollie. Excitation venial consequent sent nostrum met.
+                      </h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* three */}
+            <div className="flex flex-row items-center gap-[30px] w-[1056px] h-[159px]">
+              <div className="flex flex-col items-start w-[491px] h-[159px]">
+                <div className="flex flex-col items-start p-[25px] w-[491px] h-[159px] rounded-[9px]">
+                  <div className="flex flex-row items-start gap-[20px] w-[437px] h-[109px]">
+                    {/* icn arrow-right */}
+                    <div className="w-[9px] h-[16px] flex-none">
+                      <img src="/right-arrow.jpg" alt="arrow2" />
+                    </div>
+
+                    <div className="flex flex-col items-start gap-[5px] w-[408px] h-[109px]">
+                      <h5 className="w-[309px] h-[24px] font-Montserrat font-bold text-[16px] leading-[24px] tracking-[0.1px] text-[#252B42]">
+                        the quick fox jumps over the lazy dog
+                      </h5>
+
+                      <h6 className="w-[408px] h-[80px] font-Montserrat font-normal text-[14px] leading-[20px] tracking-[0.2px] text-[#737373]">
+                        Met minim Mollie non desert Alamo est sit cliquey dolor
+                        do met sent. RELIT official consequent door ENIM RELIT
+                        Mollie. Excitation venial consequent sent nostrum met.
+                      </h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex flex-col items-start w-[535px] h-[139px]">
+                <div className="flex flex-col items-start p-[25px] w-[535px] h-[139px] rounded-[9px]">
+                  <div className="flex flex-row items-start gap-[20px] w-[493px] h-[89px]">
+                    {/* icn arrow-right */}
+                    <div className="w-[9px] h-[16px] flex-none">
+                      <img src="/right-arrow.jpg" alt="arrow2" />
+                    </div>
+
+                    <div className="flex flex-col items-start gap-[5px] w-[464px] h-[89px]">
+                      <h5 className="w-[309px] h-[24px] font-Montserrat font-bold text-[16px] leading-[24px] tracking-[0.1px] text-[#252B42]">
+                        the quick fox jumps over the lazy dog
+                      </h5>
+
+                      <h6 className="w-[464px] h-[60px] font-Montserrat font-normal text-[14px] leading-[20px] tracking-[0.2px] text-[#737373]">
+                        Met minim Mollie non desert Alamo est sit cliquey dolor
+                        do met sent. RELIT official consequent door ENIM RELIT
+                        Mollie. Excitation venial consequent sent nostrum met.
+                      </h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h1 className="font-Montserrat font-normal flex justify-center items-center text-[20px] leading-[30px] tracking-[0.2px] text-[#737373]">
+              Haven’t got your answer? Contact our support
+            </h1>
+          </div>
+        </div>
+      </div>
+      {/* white div 2 */}
+      <div className="relative bg-white flex flex-col items-center py-[160px] gap-[96px] lg:w-[1440px] lg:h-[582px] w-full">
+        {/* Container */}
+        <div className="flex flex-col items-center gap-[36px] w-[607px] lg:w-[1050px] lg:h-[602px]">
+          {/* Main content */}
+          <div className="flex flex-col items-center gap-[30px] w-[547px] lg:w-[547px] h-[282px]">
+            <h2 className="font-Montserrat font-bold lg:text-[40px] text-[20px] leading-[50px] text-center text-[#252B42] w-full">
+              Start your 14 days free trial
+            </h2>
+
+            <h6 className="font-Montserrat font-normal text-[14px] leading-[20px] text-center text-[#737373] w-[411px]">
+              Met minim Mollie non desert Alamo est sit cliquey dolor do met
+              sent. RELIT official consequent.
+            </h6>
+            <div className="flex flex-row items-center gap-[10px]">
+              <div className="bg-[#23A6F0] text-white font-Montserrat font-bold text-[14px] leading-[22px] rounded-[5px] px-[40px] py-[15px]">
+                Try it free now
+              </div>
+            </div>
+          </div>
+
+          {/* Social Media Logos */}
+          <div className="flex flex-row gap-[34px]">
+            {/* Twitter */}
+            <div className="w-[30px] h-[24.49px] ">
+              <img src="/twitter.jpg" alt="twitter" />
+            </div>
+
+            {/* Facebook */}
+            <div className="w-[30px] h-[30px] justify-items-center">
+              <img src="/logos_facebook (1).jpg" alt="fb" />
+            </div>
+
+            {/* Instagram */}
+            <div className="w-[30px] h-[30px]">
+              <img src="/ant-design_instagram-outlined (1).png" alt="insta" />
+            </div>
+
+            {/* LinkedIn */}
+            <div className="w-[30px] h-[29.88px] ">
+              <img src="/link.jpg" alt="in" />
+            </div>
           </div>
         </div>
       </div>

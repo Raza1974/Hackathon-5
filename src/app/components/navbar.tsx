@@ -14,6 +14,7 @@ export default function Navbar() {
   const [isShopDropdownOpen, setIsShopDropdownOpen] = useState(false);
 
   return (
+    
     <header className="bg-white shadow-sm border-b w-full fixed top-0 left-0 z-50">
       {/* Announcement Bar */}
       <div className="bg-black text-white py-2 text-sm flex flex-col md:flex-row justify-between items-center px-4 md:px-10">
@@ -112,7 +113,7 @@ export default function Navbar() {
           <a href="/contact" className="text-slate-600 hover:text-black hover:underline">
             Contact
           </a> 
-          <a href="/pages/shop-page" className="text-slate-600 hover:text-black hover:underline">
+          <a href="/shop-page" className="text-slate-600 hover:text-black hover:underline">
              Pages
           </a> 
          

@@ -1,165 +1,155 @@
 "use client";
 
-import Link from "next/link";
 import {
   Phone,
   Mail,
   Instagram,
   Youtube,
   Facebook,
-  Twitter
+  Twitter,
 } from "lucide-react";
 import Image from "next/image";
 import { CiSearch, CiHeart } from "react-icons/ci";
-import { RiArrowDropDownLine } from "react-icons/ri";
+import { RiArrowDropDownLine, RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import { IoCartOutline } from "react-icons/io5";
 import { useState } from "react";
 
-import { Button } from "./ui/button";
-
 const Header = () => {
-  const [isShopDropdownOpen, setIsShopDropdownOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState<string | null>(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  // Function to handle dropdowns
+  const toggleDropdown = (menu: string) => {
+    setIsDropdownOpen(isDropdownOpen === menu ? null : menu);
+  };
 
   return (
     <header className="bg-green-700 text-white">
-      <div className="container mx-auto px-4">
+      {/* Top Bar */}
+      <div className="container px-6 mx-auto">
         <div className="flex justify-between items-center py-2 text-sm">
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-6">
             <a href="tel:+12255550118" className="flex items-center">
-              <Phone size={16} className="mr-2" />
+              <Phone size={14} className="mr-2" />
               (225) 555-0118
             </a>
             <a
               href="mailto:michelle.rivera@example.com"
               className="flex items-center"
             >
-              <Mail size={16} className="mr-2" />
+              <Mail size={14} className="mr-2" />
               michelle.rivera@example.com
             </a>
           </div>
-          <div>
-            <p>Follow Us and get a chance to win 80% off</p>
-          </div>
-          <div className="flex items-center space-x-5">
-            <span>Follow Us :</span>
-            <div className="flex space-x-1">
-              <a href="#" aria-label="Instagram">
-                <Instagram size={18} />
-              </a>
-              <a href="#" aria-label="Youtube">
-                <Youtube size={18} />
-              </a>
-              <a href="#" aria-label="Facebook">
-                <Facebook size={18} />
-              </a>
-              <a href="#" aria-label="Twitter">
-                <Twitter size={18} />
-              </a>
-            </div>
+          <p className="hidden md:block">
+            Follow Us and get a chance to win 80% off
+          </p>
+          <div className="flex items-center space-x-3">
+            <span>Follow Us:</span>
+            <a href="#"><Instagram size={16} /></a>
+            <a href="#"><Youtube size={16} /></a>
+            <a href="#"><Facebook size={16} /></a>
+            <a href="#"><Twitter size={16} /></a>
           </div>
         </div>
       </div>
-      <nav className="bg-white text-black py-4">
-        <div className="container mx-auto px-4 flex justify-between items-center">
+
+      {/* Navigation */}
+      <div className="bg-white text-black shadow-md">
+        <div className="flex justify-between items-center px-6 py-4 md:px-20">
           {/* Logo */}
-          <Link href="/" className="text-2xl font-semibold">
-            Bandage
-          </Link>
+          <h1 className="text-2xl font-bold">Bandage</h1>
+
+          {/* Mobile Menu Toggle */}
+          <button
+            className="md:hidden text-2xl"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <RiCloseLine /> : <RiMenu3Line />}
+          </button>
 
           {/* Navigation Links */}
-          <ul className="flex space-x-6 text-base font-medium">
-            <li>
-              <Link href="/" className="hover:underline hover:text-blue-500">
-                Home
-              </Link>
-            </li>
-            <li className="relative">
-              <Button
-                className="flex items-center text-slate-600 hover:text-blue-500"
-                onClick={() => setIsShopDropdownOpen(!isShopDropdownOpen)}
+          <nav
+            className={`${
+              isMobileMenuOpen ? "flex" : "hidden"
+            } md:flex flex-col md:flex-row absolute md:static top-full left-0 right-0 bg-white md:bg-transparent z-10 md:z-auto p-4 md:p-0 space-y-4 md:space-y-0 md:space-x-6`}
+          >
+            {/* Home */}
+            <div className="relative">
+              <button
+                onClick={() => toggleDropdown("home")}
+                className="flex items-center hover:text-green-700"
               >
-                Shop
-                <RiArrowDropDownLine className="ml-2 text-slate-600 text-xl" />
-              </Button>
-              {isShopDropdownOpen && (
-                <div className="absolute top-full mt-1 bg-white shadow-md rounded-md">
-                  <a
-                    href="/shop"
-                    className="block px-4 py-2 text-slate-600 hover:bg-slate-100 hover:text-blue-500"
-                  >
-                    Shop
+                Home
+                <RiArrowDropDownLine size={20} />
+              </button>
+              {isDropdownOpen === "home" && (
+                <div className="absolute bg-white text-black shadow-lg rounded-md mt-2 w-40">
+                  <a href="/home-1" className="block px-4 py-2 hover:bg-gray-100">
+                    Home 1
                   </a>
-                  <a
-                    href="/Shop1"
-                    className="block px-4 py-2 text-slate-600 hover:bg-slate-100 hover:text-blue-500"
-                  >
-                    Shop1
-                  </a>
-                  <a
-                    href="/Shop2"
-                    className="block px-4 py-2 text-slate-600 hover:bg-slate-100 hover:text-blue-500"
-                  >
-                    Shop2
+                  <a href="/home-2" className="block px-4 py-2 hover:bg-gray-100">
+                    Home 2
                   </a>
                 </div>
               )}
-            </li>
-            <li>
-              <Link
-                href="/about"
-                className="hover:underline hover:text-blue-500"
-              >
-                About
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/blog"
-                className="hover:underline hover:text-blue-500"
-              >
-                Blog
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/contact"
-                className="hover:underline hover:text-blue-500"
-              >
-                Contact
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/pages"
-                className="hover:underline hover:text-blue-500"
-              >
-                Pages
-              </Link>
-            </li>
-          </ul>
+            </div>
 
-          {/* Icons and Links */}
-          <div className="hidden md:flex items-center space-x-3 text-sm">
+            {/* Shop */}
+            <div className="relative">
+              <button
+                onClick={() => toggleDropdown("shop")}
+                className="flex items-center hover:text-green-700"
+              >
+                Shop
+                <RiArrowDropDownLine size={20} />
+              </button>
+              {isDropdownOpen === "shop" && (
+                <div className="absolute bg-white text-black shadow-lg rounded-md mt-2 w-40">
+                  <a href="/shop" className="block px-4 py-2 hover:bg-gray-100">
+                    Shop
+                  </a>
+                  <a href="/shop-1" className="block px-4 py-2 hover:bg-gray-100">
+                    Shop 1
+                  </a>
+                  <a href="/shop-2" className="block px-4 py-2 hover:bg-gray-100">
+                    Shop 2
+                  </a>
+                </div>
+              )}
+            </div>
+
+            {/* Other Links */}
+            <a href="/about" className="hover:text-green-700">
+              About
+            </a>
+            <a href="/blog" className="hover:text-green-700">
+              Blog
+            </a>
+            <a href="/contact" className="hover:text-green-700">
+              Contact
+            </a>
+            <a href="/pages" className="hover:text-green-700">
+              Pages
+            </a>
+          </nav>
+
+          {/* Icons */}
+          <div className="hidden md:flex items-center space-x-4">
             <Image src="/icn contact.jpg" alt="hero" width={16} height={16} />
-            <a
-              href="./login"
-              className="text-blue-500 hover:underline hover:text-black"
-            >
+            <a href="./login" className="hover:text-green-700">
               Login
             </a>
-            <span className="text-gray-400">/</span>
-            <a
-              href="./register"
-              className="text-blue-500 hover:underline hover:text-black"
-            >
+            <span>/</span>
+            <a href="./register" className="hover:text-green-700">
               Register
             </a>
-            <CiSearch className="text-blue-300 text-xl cursor-pointer hover:text-black" />
-            <CiHeart className="text-xl text-blue-300 hover:text-black cursor-pointer" />
-            <IoCartOutline className="text-xl text-blue-300 hover:text-black cursor-pointer" />
+            <CiSearch className="cursor-pointer hover:text-green-700" />
+            <CiHeart className="cursor-pointer hover:text-green-700" />
+            <IoCartOutline className="cursor-pointer hover:text-green-700" />
           </div>
         </div>
-      </nav>
+      </div>
     </header>
   );
 };
